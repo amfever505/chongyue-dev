@@ -88,7 +88,7 @@ div#mv {
   height: 980px;
 }
 .slide-arrow {
-  display: inline;
+  display: block;
   position: absolute;
   width: 32px;
   height: 32px;
