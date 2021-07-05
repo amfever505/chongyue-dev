@@ -7,7 +7,7 @@ html {
   font-size: 12px;
 }
 header {
-  @apply flex bg-black w-full h-25 px-5 sm:px-9 items-center justify-between;
+  @apply flex bg-black w-full fixed top-0 h-25 z-10 px-5 sm:px-9 items-center justify-between;
 }
 p {
   @apply text-base;
@@ -26,7 +26,7 @@ h2 {
   @apply mb-10 md:mb-0;
 }
 .nav-wrapper {
-  @apply hidden w-full h-screen fixed top-0 left-0 z-10 md:block md:h-auto md:relative md:max-w-md md:w-6/12 lg:w-2/6 2xl:w-3/12;
+  @apply hidden w-full h-screen fixed top-0 left-0 z-20 md:block md:h-auto md:relative md:max-w-md md:w-6/12 lg:w-2/6 2xl:w-3/12;
 }
 
 .menu {
@@ -59,13 +59,12 @@ section row .rowbox1-1_r {
 }
 
 .burger-btn {
-  @apply z-10  block relative;
+  @apply z-20  block relative;
   width: 32px;
   height: 24px;
 }
 .bar {
   @apply w-full block absolute left-2/4 bg-white transition-all;
-  /* width: 20px;*/
   height: 1px;
   transform: translateX(-50%);
 }
@@ -159,7 +158,7 @@ div#mv {
   line-height: 32px;
   background-color: #777;
   border-radius: 50%;
-  z-index: 10;
+  z-index: 5;
   top: 50%;
   opacity: 0.5;
   margin: 0 20px;
