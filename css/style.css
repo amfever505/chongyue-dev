@@ -1,6 +1,112 @@
-@charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600&family=Shippori+Mincho:wght@400;600;800&display=swap');
-/* pc */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 12px;
+}
+header {
+  @apply flex bg-black w-full h-25 px-5 sm:px-9 items-center justify-between;
+}
+p {
+  @apply text-base;
+}
+span {
+  @apply text-sm;
+}
+h1 {
+  @apply text-4xl text-center mb-8 lg:mb-10;
+}
+h2 {
+  @apply text-xl text-center mb-6 lg:mb-8;
+}
+
+#gnav ul li {
+  @apply mb-10 md:mb-0;
+}
+.nav-wrapper {
+  @apply hidden w-full h-screen fixed top-0 left-0 z-10 md:block md:h-auto md:relative md:max-w-md md:w-6/12 lg:w-2/6 2xl:w-3/12;
+}
+
+.menu {
+  @apply block absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mv-item {
+  @apply bg-no-repeat bg-center bg-cover pt-1/2img;
+}
+.img--3_4 {
+  @apply w-full pt-3/4img pt-80 bg-no-repeat bg-center bg-cover;
+}
+footer p {
+  @apply leading-footer text-sm;
+}
+section {
+  @apply m-auto w-full max-w-7xl;
+}
+section row .rowbox1-1_l,
+section row .rowbox1-1_r {
+  @apply w-full flex-col flex-1 mb-13 lg:mb-20;
+}
+section row .rowbox1-1_l {
+  @apply px-0 md:pl-20 lg:pl-24 2xl:pl-32;
+}
+section row .rowbox1-1_r {
+  @apply px-0 md:pr-20 lg:pr-24 2xl:pr-32;
+}
+
+.burger-btn {
+  @apply z-10  block relative;
+  width: 32px;
+  height: 24px;
+}
+.bar {
+  @apply w-full block absolute left-2/4 bg-white transition-all;
+  /* width: 20px;*/
+  height: 1px;
+  transform: translateX(-50%);
+}
+.bar_top {
+  @apply top-0;
+}
+.bar_mid {
+  @apply top-2/4;
+  transform: translate(-50%, -50%);
+}
+.bar_bottom {
+  @apply bottom-0;
+}
+@media screen(sm) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen(md) {
+  html {
+    font-size: 15px;
+  }
+
+  .burger-btn {
+    @apply hidden;
+  }
+  .menu {
+    @apply flex relative text-center justify-between left-0 transform-none;
+  }
+}
+@media screen(lg) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen(xl) {
+  html {
+    font-size: 20px;
+  }
+}
+
 /* ----------------
   common
   home
@@ -9,25 +115,13 @@
 ------------------ */
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: 'Fira Sans', 'Shippori Mincho', sans-serif, serif;
-  color: #fff;
   font-weight: 400;
   line-height: 1.5em;
 }
 body {
-  background-color: #484848;
+  width: 100%;
 }
-h1 {
-  font-size: 36px;
-}
-h2 {
-  font-size: 28px;
-}
-p {
-  font-size: 20px;
-}
+
 span {
   text-align: center;
 }
@@ -39,36 +133,12 @@ li {
 }
 /* HOME */
 header {
-  width: 100%;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  /* 子要素の高さが親要素になった時に解決  */
-  justify-content: space-between;
   box-shadow: 0px 4px 4px #333;
-  background-color: #1d1d1d;
-}
-.header_logo {
-  margin: 0 0 0 35px;
-}
-nav#gnav {
-  width: 464px;
-  margin: 0 35px 0 0;
-}
-ul.menu {
-  display: flex;
-  justify-content: space-between;
-}
-nav#gnav a p {
-  font-size: 16px;
-  text-align: center;
 }
 
-nav#gnav a span {
-  font-size: 14px;
-  display: block;
-  text-align: center;
-  transition: 0.5s;
+nav#gnav {
+  /* width: 35%; */
+  /* margin: 0 35px 0 0; */
 }
 nav#gnav a:hover p,
 nav#gnav a:hover span {
@@ -77,16 +147,10 @@ nav#gnav a:hover span {
 
 div#mv {
   width: 100%;
-  height: 980px;
-  /* overflow: hidden; */
-  margin: 0 0 80px 0;
+
+  /* margin: 0 0 80px 0; */
 }
 
-.mv-item {
-  background: no-repeat center center;
-  background-size: cover;
-  height: 980px;
-}
 .slide-arrow {
   display: block;
   position: absolute;
@@ -106,47 +170,6 @@ div#mv {
 .next-arrow {
   right: 0;
 }
-main#home {
-  width: 85%;
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 60px 0 68px 0;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-h2.home,
-h2.midashi_second,
-h3.subcopy {
-  text-align: center;
-  margin: 0 0 56px 0;
-}
-h2.home,
-h2.midashi_second {
-  font-size: 32px;
-  color: #0da536;
-  font-weight: bold;
-}
-h3.subcopy {
-  color: #707070;
-  font-size: 24px;
-}
-footer {
-  height: 145px;
-  text-align: center;
-  color: #666;
-}
-p.txt {
-  width: 80%;
-  margin: 0 auto;
-  font-size: 16px;
-  line-height: 27px;
-}
-
-p.copy {
-  line-height: 145px;
-  font-size: 14px;
-}
-
-/* 下層ページ共通 */
 
 #second_page {
   width: 85%;
