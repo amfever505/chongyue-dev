@@ -42,8 +42,20 @@ module.exports = {
       black: '#1d1d1d',
       white: '#fff',
       gray: {
+        300: '#333',
         700: '#484848',
       },
+      green: {
+        200: '#aed32d',
+      },
+    },
+    minWidth: {
+      0: '0',
+      '1/4': '25%',
+      '1/3': '33.3%',
+      '1/2': '50%',
+      '3/4': '75%',
+      full: '100%',
     },
     extend: {
       spacing: {
@@ -52,6 +64,7 @@ module.exports = {
         '1/2img': '52%',
         '3/4img': '75%',
         '1/1img': '100%',
+        minus3: '-0.75rem',
       },
       lineHeight: {
         footer: '10rem',

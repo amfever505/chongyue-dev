@@ -4,17 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CHONG YUE ｜ HOME</title>
+    <title>CHONG YUE ｜ Gallery</title>
 
     <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/slick.css" />
-    <link rel="stylesheet" href="css/slick-theme.css" />
     <!-- <link rel="stylesheet" href="css/style.css" /> -->
-    <link rel="stylesheet" href="dist/tailwind.css" />
-    <link rel="stylesheet" href="css/plugin.css" />
-    <!-- slick.js style -->
-
+    <!-- <link rel="stylesheet" href="css/plugin.css" /> -->
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="dist/tailwind.css" />
 
     <!-- 実行コード -->
     <script></script>
@@ -38,10 +35,12 @@
                 <span class="nav-i-sbttl">おすすめ</span>
               </a>
             </li>
-            <li>
+            <li class="now">
               <a href="gallery.html">
                 <p class="nav-i-ttl">Gallery</p>
                 <span class="nav-i-sbttl">ギャラリー</span>
+
+                <span class="nav-line"></span>
               </a>
             </li>
             <li>
@@ -69,42 +68,43 @@
       </div>
     </header>
     <!-- <button class="slick-prev slick-arrow" aria-label="Previous" type="button" style="">Previous</button> -->
-    <div id="mv" class="mv-box mb-13 lg:mb-20 mt-25">
-      <div class="mv-item"></div>
-      <div class="mv-item"></div>
-      <div class="mv-item"></div>
-      <div class="mv-item"></div>
-    </div>
-    <!-- <button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Next</button> -->
 
-    <main id="home" class="px-8">
+    <main id="gallery" class="px-8 mt-25 pt-8 md:pt-20 2xl:pt-25">
       <section>
-        <row class="flex items-center flex-col md:flex-row">
-          <div class="rowbox1-1_l">
-            <h1 class="text-left">MESSAGE</h1>
-            <h2 class="text-left">ChongYueは台湾のロードバイク専門店です。</h2>
-            <p class="txt">
-              2009から、台湾桃園で中壢本店を設立し、カスタマイズ含め自転車全般的なサービスを提供しております。<br />
-              現在台北から台湾中部の台中まで５つ店舗展開し、新品、中古、アクセサリーなど国内海外のブランドを多数扱っております。
-            </p>
-          </div>
-          <div class="rowbox1-1_l">
-            <div class="img--3_4" style="background-image: url('img/home/home_1.jpeg')"></div>
-          </div>
-        </row>
-        <row class="flex items-center flex-col md:flex-row-reverse">
-          <div class="rowbox1-1_r">
-            <h2 class="text-left">レース・イベントも毎月開催中</h2>
-            <p>
-              台湾自転車協会と連携し、毎月レースなどのイベントも沢山開催しております。<br />
-              また、「環島」という台湾一周サイクリングも自転車レンタルサービスを提供し、皆様を応援しております。
-              みんなと一緒にレースを楽しみましょう！
-            </p>
-          </div>
-          <div class="rowbox1-1_r">
-            <div class="img--3_4" style="background-image: url('img/home/home_2.jpeg')"></div>
-          </div>
-        </row>
+        <h1>Gallery</h1>
+        <h2>ギャラリー</h2>
+        <div class="gallery flex flex-1 flex-wrap -mx-3">
+          <a href="img/gallery/001.jpeg" data-fancybox="group1" class="gallery__item">
+            <div class="img--3_4" style="background-image: url('img/gallery/001.jpeg')"></div>
+          </a>
+          <a href="img/gallery/002.jpeg" data-fancybox="group1" class="gallery__item">
+            <div class="img--3_4" style="background-image: url('img/gallery/002.jpeg')"></div>
+          </a>
+          <a href="img/gallery/003.jpeg" data-fancybox="group1" class="gallery__item">
+            <div class="img--3_4" style="background-image: url('img/gallery/003.jpeg')"></div>
+          </a>
+          <a href="img/gallery/004.jpeg" data-fancybox="group1" class="gallery__item">
+            <div class="img--3_4" style="background-image: url('img/gallery/004.jpeg')"></div>
+          </a>
+          <a href="img/gallery/005.jpeg" data-fancybox="group1" class="gallery__item">
+            <div class="img--3_4" style="background-image: url('img/gallery/005.jpeg')"></div>
+          </a>
+          <a href="img/gallery/006.jpeg" data-fancybox="group1" class="gallery__item">
+            <div class="img--3_4" style="background-image: url('img/gallery/006.jpeg')"></div>
+          </a>
+          <a href="img/gallery/007.jpeg" data-fancybox="group1" class="gallery__item">
+            <div class="img--3_4" style="background-image: url('img/gallery/007.jpeg')"></div>
+          </a>
+          <a href="img/gallery/008.jpeg" data-fancybox="group1" class="gallery__item">
+            <div class="img--3_4" style="background-image: url('img/gallery/008.jpeg')"></div>
+          </a>
+          <a href="img/gallery/009.jpeg" data-fancybox="group1" class="gallery__item">
+            <div class="img--3_4" style="background-image: url('img/gallery/009.jpeg')"></div>
+          </a>
+          <a href="img/gallery/010.jpeg" data-fancybox="group1" class="gallery__item">
+            <div class="img--3_4" style="background-image: url('img/gallery/010.jpeg')"></div>
+          </a>
+        </div>
       </section>
     </main>
 
@@ -112,7 +112,7 @@
       <p class="copy">Copyright © 2021 ChongYue Cycling All Rights Reserved.</p>
     </footer>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="js/slick.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
   </body>
 </html>
