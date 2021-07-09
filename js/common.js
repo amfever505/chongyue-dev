@@ -1,3 +1,4 @@
+new WOW().init();
 let mvItems = $('.mv-item');
 let mvUrl = 'url("./img/home/mv_';
 $('.mv-item').each(function (index, elem) {
@@ -21,6 +22,33 @@ $(document).ready(function () {
 $('.burger-btn').on('click', function () {
   //.btn_triggerをクリックすると
   $('.burger-btn').toggleClass('close'); //.btn_triggerにcloseクラスを付与(ボタンのアニメーション)
-  $('.nav-wrapper').fadeToggle(500); //.nav-wrapperが0.5秒でフェードイン(メニューのフェードイン)
+  // $('.nav-wrapper').fadeToggle(500); //.nav-wrapperが0.5秒でフェードイン(メニューのフェードイン)
+  $('#nav-menu').toggleClass('nav-wrapper-show');
+
   $('body').toggleClass('noscroll'); //bodyにnoscrollクラスを付与(スクロールを固定)
 });
+
+// selectCharacter function
+let h = $('.shop-info').outerHeight(true);
+console.log(h);
+$('.shop-info-li').css('padding-top', h + 'px');
+const SHOPS = {
+  1: 'chongyue',
+  2: 'broz',
+  3: 'labike',
+  4: 'chongyue_ty',
+  5: 'haruda',
+};
+let preShop = SHOPS[1];
+let preNo = 1;
+function selectShop(n) {
+  const name = SHOPS[n];
+  $('#' + preShop).toggleClass('show');
+  // $('.show').fadeToggle('slow', 'linear');
+  $('#' + name).toggleClass('show');
+  $('#no' + preNo).toggleClass('current');
+  $('#no' + n).toggleClass('current');
+
+  preShop = name;
+  preNo = n;
+}
