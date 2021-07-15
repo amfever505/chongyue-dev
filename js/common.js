@@ -44,11 +44,20 @@ let preNo = 1;
 function selectShop(n) {
   const name = SHOPS[n];
   $('#' + preShop).toggleClass('show');
-  // $('.show').fadeToggle('slow', 'linear');
   $('#' + name).toggleClass('show');
   $('#no' + preNo).toggleClass('current');
   $('#no' + n).toggleClass('current');
-
+  if (window.matchMedia('(max-width: 1024px)').matches) {
+    // SM表示の時の処理
+    $('.shop-li').toggleClass('drop');
+  }
+  $('#' + preNo).toggleClass('btn--up');
+  $('#' + n).toggleClass('btn--up');
   preShop = name;
   preNo = n;
 }
+
+$('.select-btn').on('click', function () {
+  $('.shop-li').toggleClass('drop');
+  // $('.shop-li').toggleClass('dropdown');
+});
